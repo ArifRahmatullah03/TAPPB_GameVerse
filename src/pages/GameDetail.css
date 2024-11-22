@@ -1,0 +1,119 @@
+.game-detail-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(135deg, #a29bfe, #81ecec);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this to GameDetail.css */
+
+.loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto; /* Center the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full viewport height */
+}
+
+
+.game-detail-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.game-detail-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.game-info {
+    background-color: #f7f9fc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.game-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-info li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+    max-width: 100%; /* Ensures the text doesn’t exceed the container’s width */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    overflow: hidden; /* Hides overflowed text */
+    text-overflow: ellipsis; /* Adds "..." to indicate there’s more text */
+}
+
+
+.game-info strong {
+    color: #3498db; /* Warna biru untuk label */
+}
+
+.add-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.add-button {
+    background-color: #3498db; /* Warna tombol */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Untuk mengatur tombol sebagai inline block */
+}
+
+.add-button:hover {
+    background-color: #2980b9; /* Warna saat hover */
+    transform: scale(1.05);
+}
+
+/* Toggle button for description */
+.toggle-description-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.toggle-description-button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+/* Basic Styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Menjamin navbar berada di atas konten */
+}
+
+.navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 5px; /* Agar ada efek rounded */
+}
+
+/* Style untuk navbar item yang aktif */
+.navbar-item.active {
+  color: #fff; /* Warna teks saat item aktif */
+  background-color: #444; /* Latar belakang item aktif */
+}
+
+/* Hover effect */
+.navbar-item:hover {
+  color: #fa4040;
+  background-color: #555; /* Hover pada item navbar */
+}
+
+/* Icon styling */
+.navbar-icon {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* Menghindari konten tertutup oleh navbar fixed */
+body {
+  padding-bottom: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Untuk memastikan konten di bawah navbar tidak tertutup */
+.main-content {
+  padding-bottom: 60px; /* Sesuaikan dengan tinggi navbar jika menggunakan class ini */
+}

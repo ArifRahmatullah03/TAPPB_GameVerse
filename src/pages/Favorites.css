@@ -1,0 +1,163 @@
+.favorites-container {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #a29bfe, #81ecec);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+li {
+  background: #ffffff;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar game */
+.game-image {
+  width: 100%; /* Gambar akan mengikuti lebar kotak */
+  max-width: 200px; /* Maksimal lebar 200px */
+  height: auto; /* Tinggi otomatis sesuai aspek rasio gambar */
+  border-radius: 10px; /* Tetap pertahankan sudut bulat */
+  object-fit: contain; /* Tampilkan seluruh gambar tanpa pemotongan */
+}
+
+/* Detail game */
+.game-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.favorite-game-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3436;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.game-genre {
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: #0984e3;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+li .game-desc {
+  font-size: 0.9rem;
+  color: #636e72;
+  text-align: justify; /* Teks deskripsi menjadi rata kanan-kiri */
+}
+
+
+.delete-button {
+  background-color: #ff7675;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #d63031;
+}
+
+/* === Responsiveness for Mobile Devices === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .game-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .favorite-game-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .game-genre {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .game-desc {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .delete-button {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    padding: 0.8rem;
+  }
+
+  .game-image {
+    max-width: 250px;
+  }
+
+  .favorite-game-title {
+    font-size: 1rem;
+  }
+
+  .game-desc {
+    font-size: 0.8rem;
+  }
+
+  .delete-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
